@@ -44,6 +44,7 @@ def create_login_form(builder):
 class AbstractFormBuilder(metaclass=abc.ABCMeta):
     # из-за наследования от abc.ABCMeta данный класс нельзя инстанцировать
     # то есть можно использовать только в качестве абстрактного базового класса
+
     @abc.abstractmethod
     def add_title(self, title):
         self.title = title

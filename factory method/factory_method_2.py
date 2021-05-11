@@ -71,6 +71,7 @@ class CheckersBoard(AbstractBoard):
     def populate_board(self):
         def black():
             return create_piece(DRAUGHT, BLACK)
+
         def white():
             return create_piece(DRAUGHT, WHITE)
         rows = ((None, black()), (black(), None), (None, black()),
@@ -86,7 +87,6 @@ class ChessBoard(AbstractBoard):
 
     def __init__(self):
         super().__init__(8, 8)
-
 
     def populate_board(self):
         for row, color in ((0, BLACK), (7, WHITE)):
